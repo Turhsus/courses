@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Delete a Course</title>
+	</head>
+	<body>
+		<div class="delete">
+			<h2>Are you sure you want to delete the following course?</h2>
+			Name: {{ course['name'] }}
+			Description: {{ course['description'] }}
+			<br>
+			<a href="/courses/dont_delete">NO!</a>
+			<br>
+			<form action="/courses/delete" method="POST">
+				<input type="submit" value="Yes! I want to delete this">
+			</form>
+
+		</div>
+	</body>
+</html>
